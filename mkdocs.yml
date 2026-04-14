@@ -1,1 +1,74 @@
-site_name: My Docs
+site_name: Oferta Académica · UTPL
+site_description: Consulta las carreras disponibles por facultad y el título que otorga cada programa en la Universidad Técnica Particular de Loja.
+site_url: https://universidad-anthonyjoelry.github.io/oferta/
+site_author: Universidad Técnica Particular de Loja
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: es
+
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+
+  font:
+    text: Source Sans 3
+    code: Fira Code
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.tooltips
+    - toc.follow
+
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - assets/css/utpl.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.utpl.edu.ec
+      name: Sitio Oficial UTPL
+    - icon: fontawesome/brands/github
+      link: https://github.com/universidad-anthonyjoelry/oferta
+      name: Repositorio
+
+copyright: >
+  &copy; 2025 Universidad Técnica Particular de Loja —
+  <a href="https://www.utpl.edu.ec" target="_blank">www.utpl.edu.ec</a> · Loja, Ecuador
+
+nav:
+  - Inicio: index.md
+  - Facultades:
+    - Ciencias Jurídicas y Políticas: facultades/juridicas.md
+    - Ciencias Sociales, Educación y Humanidades: facultades/sociales.md
+    - Ciencias Económicas y Empresariales: facultades/economicas.md
+    - Ingenierías y Arquitectura: facultades/ingenierias.md
+    - Ciencias de la Salud: facultades/salud.md
+    - Artes y Diseño: facultades/artes.md
+    - Biociencias: facultades/biociencias.md
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
